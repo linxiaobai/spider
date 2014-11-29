@@ -143,7 +143,7 @@ public class PublishStatus {
 
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        for (int i = 0; i <  10; i++) {
+        for (int i = 0; i < 10; i++) {
             init();
             String loginUrl = "http://www.renren.com/ajaxLogin/login";
             String email = "your email";
@@ -170,9 +170,7 @@ public class PublishStatus {
 
 class JsonObj {
     private boolean code;
-
     private String homeUrl;
-
     private String failDescription;
 
     public String getFailDescription() {
