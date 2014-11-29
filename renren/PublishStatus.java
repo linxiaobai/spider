@@ -20,12 +20,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Kevin on 2014/11/29.
+ * version 1.0
+ * @author xiaobai 2014/11/29
+ * @emali linxiaobai@live.com
+ * @description   publish renren status
  */
 public class PublishStatus {
     private static HttpClient httpclient;
     /**
-     * 初始化httpClient
+     * init the httpClient
      */
     public static void init() {
         httpclient = HttpClients.createDefault();
