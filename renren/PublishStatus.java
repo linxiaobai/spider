@@ -1,5 +1,3 @@
-package com.i8da.kevin;
-
 import com.google.gson.Gson;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
