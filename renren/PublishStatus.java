@@ -143,8 +143,8 @@ public class PublishStatus {
         for (int i = 0; i <  10; i++) {
             init();
             String loginUrl = "http://www.renren.com/ajaxLogin/login";
-            String email = "linxiaobai_music@foxmail.com";
-            String password = "ljdxq165";
+            String email = "your email";
+            String password = "your password";
             String homeUrl = login(loginUrl,email,password);
             System.out.println("ajax login return url:"+homeUrl);
             String pageContent = getRequest(homeUrl);
