@@ -33,7 +33,7 @@ public class PublishStatus {
     }
 
     /**
-     * get the publish hidden post required params
+     * get the publish status hidden required params
      * @param pageContent
      * @return params map
      */
