@@ -39,17 +39,17 @@ public class PublishStatus {
      */
     public static Map<String,Object> getHiddenParams(String pageContent) {
         Map<String,Object> paramsMap = new HashMap<String, Object>();
-        String keyWords = "hostid=";
+        String keyWords = "id : \"";
         int startIndex = pageContent.indexOf(keyWords)+keyWords.length();
         int entIndex = startIndex + 9; //the length of hostid  is 9
-        paramsMap.put("hostid",pageContent.substring(startIndex,entIndex));
-        keyWords = "get_check:'-";
+        paramsMap.put("id",pageContent.substring(startIndex,entIndex));
+        keyWords = "requestToken : '";
         startIndex = pageContent.indexOf(keyWords)+keyWords.length();
-        entIndex = startIndex + 10; //the length of requestToken is 10
+        entIndex = startIndex + 9; //the length of requestToken is 10
         paramsMap.put("requestToken",pageContent.substring(startIndex,entIndex));
-        keyWords = "get_check_x:'";
+        keyWords = "_rtk : '";
         startIndex = pageContent.indexOf(keyWords)+keyWords.length();
-        entIndex = startIndex + 8; //the length of _rtk is 8
+        entIndex = startIndex + 7; //the length of _rtk is 8
         paramsMap.put("_rtk",pageContent.substring(startIndex,entIndex));
         return paramsMap;
     }
@@ -150,7 +150,7 @@ public class PublishStatus {
             System.out.println("ajax login return url:"+homeUrl);
             String pageContent = getRequest(homeUrl);
             Map<String,Object> map = getHiddenParams(pageContent);
-            String publishStatusUrl = "http://shell.renren.com/"+map.get("hostid").toString()+"/status";
+            String publishStatusUrl = "http://shell.renren.com/"+map.get("id").toString()+"/status";
             StringBuffer stringBuffer = new StringBuffer("test").append(i);
             map.put("content",stringBuffer.toString()); // input you want post content
             map.put("privacyParams","{\"sourceControl\":-1}"); //-1 is represent privacy ,99 is represent public
