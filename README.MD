@@ -7,7 +7,7 @@ renren  :  publishStatus on renren
 
 some jars related dependency
 
-<dependency>
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.3.1</version>
