@@ -24,6 +24,9 @@ import java.util.*;
 /**
  * <P>
  * Description:linxiaobai@live.com
+ * username 学号
+ * password 密码 
+ * 填写完了后就可以正常查询，下面的keyword填写查询学科关键字，可以不填
  * </p>
  *
  * @author Kevin
@@ -70,7 +73,7 @@ public class TJPU {
         }
     }
 
-    public static HttpEntity convertPostData(HashMap<String, Object> params) {
+    private static HttpEntity convertPostData(HashMap<String, Object> params) {
         List<BasicNameValuePair> formParams = new ArrayList<BasicNameValuePair>();
         if (params != null && !params.isEmpty()) {
             Iterator<Map.Entry<String, Object>> iterEntry = params.entrySet().iterator();
@@ -96,11 +99,11 @@ public class TJPU {
         return EntityUtils.toString(httpEntity, "UTF-8");
     }
 
-    public static String subStringData(String oldString) {
+    private static String subStringData(String oldString) {
         return oldString.substring(oldString.indexOf(">") + 1, oldString.lastIndexOf("<")).trim();
     }
 
-    public static String subStringData2(String oldString) {
+    private static String subStringData2(String oldString) {
         return oldString.substring(oldString.indexOf("<p align=\"center\">") + "<p align=\"center\">".length(),
                 oldString.indexOf("&"));
     }
