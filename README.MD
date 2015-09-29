@@ -3,9 +3,9 @@ that to spider url.
 
 
 
-renren  :  publishStatus on renren
+#renren  :  publishStatus on renren#
 
-ZFM : http://zufangma.cn/index   should not login this website,fetch the hidden tel of 大妈
+#ZFM : http://zufangma.cn/index   should not login this website,fetch the hidden tel of 大妈#
 
 tjpu: query your scores , just for tjpu students
 ==================
